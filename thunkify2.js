@@ -3,7 +3,7 @@
  */
 var fs = require('fs');
 var thunkify = require('thunkify');
-var readFile = thunkify(fs.readFile);
+var readFile =new thunkify(fs.readFile);
 function run(fn) {
     var gen = fn();
 
